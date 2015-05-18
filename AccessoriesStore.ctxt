@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=AccessoriesStore()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ AccessoriesStore\n
+comment1.params=accy
+comment1.target=void\ addAccessory(Accessories)
+comment1.text=\n\ Add\ existing\ Accessories\ object\ to\ ArrayList\n\ @param\ accy\ (existing\ Accessories\ object)\n
+comment2.params=
+comment2.target=Accessories\ returnHat()
+comment3.params=
+comment3.target=Accessories\ returnGlasses()
+comment4.params=
+comment4.target=void\ printHats()
+comment5.params=
+comment5.target=void\ printGlasses()
+numComments=6

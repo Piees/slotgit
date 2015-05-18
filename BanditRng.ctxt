@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=
+comment0.target=BanditRng()
+comment0.text=\n\ constructor\n
+comment1.params=
+comment1.target=void\ spin()
+comment1.text=\n\ spinmath\n\ @param\ brgs\ math\n
+comment2.params=
+comment2.target=void\ resetRewards()
+comment3.params=
+comment3.target=void\ reward()
+numComments=4

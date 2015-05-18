@@ -1,0 +1,20 @@
+#BlueJ class context
+comment0.params=
+comment0.target=SlotAdmin()
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ SlotAdmin\n
+comment1.params=
+comment1.target=void\ clearRewardList()
+comment1.text=\n\ clears\ out\ rewardList\ from\ 0\ to\ 8\n
+comment2.params=i
+comment2.target=int\ getRewardInfo(int)
+comment2.text=\n\ @returns\ int\ from\ index\ of\ reward[]\n
+comment3.params=payin
+comment3.target=boolean\ rewardListEmpty(int)
+comment3.text=\n\ @returns\ true\ if\ rewardList\ is\ empty\n\ for\ use\ in\ bandit\ to\ check\ if\ you\ won\ anything\n
+comment4.params=rewardLine\ newReward
+comment4.target=void\ setReward(int,\ java.lang.String)
+comment4.text=\n\ sets\ reward\ to\ rewardLine\ from\ newReward\n
+comment5.params=
+comment5.target=void\ printRewards()
+comment5.text=\n\ get\ rewards\n\ http\://stackoverflow.com/questions/2697182/how-to-use-an-array-list\n
+numComments=6

@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=type\ price\ description
+comment0.target=Hat(java.lang.String,\ int,\ java.lang.String)
+comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Hat\n
+comment1.params=
+comment1.target=java.lang.String\ returnType()
+comment2.params=
+comment2.target=void\ printDetails()
+numComments=3

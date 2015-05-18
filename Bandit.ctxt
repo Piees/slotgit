@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.params=k
+comment0.target=Bandit(UserVallet)
+comment0.text=\n\ public\n
+comment1.params=buyIn
+comment1.target=void\ play(int)
+comment1.text=\n\ spins\ if\ balance\ is\ greater\ than\ cost\ of\ game\ else\ prints\ error\n
+numComments=2
