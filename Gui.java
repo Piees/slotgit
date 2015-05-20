@@ -22,7 +22,7 @@ public class Gui
 {
     User usr = new User();
     private int addBalanceInputAmount;
-    private String stringAmount;
+    //private String stringAmount;
     final HashMap<Integer, ArrayList<Integer>> rewardAllocation = 
         new HashMap<Integer, ArrayList<Integer>>(); 
     private int oldBalance;
@@ -199,13 +199,21 @@ public class Gui
         JButton addBalanceButton = new JButton(new AbstractAction() {
             public void actionPerformed(ActionEvent e)
             {
-                /**String **/stringAmount = addBalanceInput.getText();
-                addBalanceInputAmount = Integer.valueOf(stringAmount);
-                usr.vallet.addBalance(addBalanceInputAmount);
+                String stringAmount = addBalanceInput.getText();
+                try {
+                    addBalanceInputAmount = Integer.valueOf(stringAmount);
+                    usr.vallet.addBalance(addBalanceInputAmount);
+                    JOptionPane.showMessageDialog(null, 
+                        "Your current balance is: " 
+                        + usr.vallet.returnBalance());
+                } 
+                catch (NumberFormatException ek) { 
+                    JOptionPane.showMessageDialog(null, "Invalid value");
+                    System.out.println("Invalid value");
+                    addBalanceInputAmount = 0;
+                }
                 creditLabel.setText("Credits: " + usr.vallet.returnBalance());
                 addBalanceInput.setText("");
-                JOptionPane.showMessageDialog(null, "Your current balance is: "
-                    + usr.vallet.returnBalance());
             }
         });
         gbc.fill = GridBagConstraints.HORIZONTAL;
