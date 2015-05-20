@@ -1,8 +1,0 @@
-#BlueJ class context
-comment0.params=
-comment0.target=Slot()
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Slot\n
-comment1.params=
-comment1.target=void\ allRewards()
-comment1.text=\n\ prints\ rewards\n
-numComments=2
