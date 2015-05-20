@@ -1,13 +1,15 @@
 #BlueJ class context
 comment0.params=
 comment0.target=Gui()
+comment0.text=\n\ constructor\ of\ Gui\ creats\ one\ swing\ window\n
 comment1.params=e
 comment1.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment10.params=i\ line
 comment10.target=javax.swing.ImageIcon\ returnIcon(int,\ int)
-comment10.text=\n\ returns\ icon\ for\ label\ i\ for\ amounts\ of\ lines\ played\n
+comment10.text=\n\ @return\ ImageIcon\ for\ label\ i\ for\ amounts\ of\ lines\ played\n\ @param\ i\ for\ line\ to\ check\n\ @param\ line\ for\ how\ many\ lines\ to\ check\n
 comment11.params=i
 comment11.target=void\ rewardPopup(int)
+comment11.text=\n\ @param\ i\ for\ game\ cost\ to\ pinpoint\ isufficient\ balances\n\ outputs\ a\ JOptionPane\ with\ error\ if\ there\ is\ insufficient\ balance\n\ outputs\ a\ JOptionPane\ with\ balance\ change\ if\ game\ was\ played\n
 comment2.params=e
 comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
 comment3.params=e
@@ -23,6 +25,8 @@ comment7.target=void\ clearLabelText()
 comment7.text=\n\ used\ in\ returnIcon\ to\ clear\ welcome\ text\ after\ spin\ has\ been\ done\n
 comment8.params=i
 comment8.target=javax.swing.ImageIcon\ returnWinIcon(int)
+comment8.text=\n\ @return\ ImageIcon\ win\ icon\n\ @param\ i\ for\ line\ to\ check\n
 comment9.params=i
 comment9.target=javax.swing.ImageIcon\ returnLossIcon(int)
+comment9.text=\n\ @return\ ImageIcon\ loss\ icon\n\ @param\ i\ for\ line\ to\ check\n
 numComments=12

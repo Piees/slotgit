@@ -1,8 +1,11 @@
 #BlueJ class context
 comment0.params=k
 comment0.target=Bandit(UserVallet)
-comment0.text=\n\ public\n
-comment1.params=buyIn
-comment1.target=void\ play(int)
-comment1.text=\n\ spins\ if\ balance\ is\ greater\ than\ cost\ of\ game\ else\ prints\ error\n
-numComments=2
+comment0.text=\n\ @param\ k\ Uservallet\ to\ pass\ vallet\ in\ user\n
+comment1.params=
+comment1.target=void\ allRewards()
+comment1.text=\n\ prints\ rewards,\ local\ version\ of\ adm.printRewards()\n
+comment2.params=buyIn
+comment2.target=void\ play(int)
+comment2.text=\n\ @param\ buyIn\ cost\ of\ current\ game\n\ spins\ if\ balance\ is\ greater\ than\ cost\ of\ game\ else\ prints\ error\n
+numComments=3

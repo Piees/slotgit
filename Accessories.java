@@ -1,18 +1,30 @@
 
 /**
- * Write a description of class Accessories here.
+ * Superclass for different accessories sold in AccessoriesStore
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Yngve Olsen Ranestad
+ * @version 20.05.15
  */
 public class Accessories
 {
-    // instance variables - replace the example below with your own
+    /**
+     * price of product
+     */
     public int price;
+    /**
+     * type of accessory
+     * example: fedora or sunglasses
+     */
     public String type;
+    /**
+     * description of accessory
+     */
     public String description;
 
     /**
+     * @param type of accessory, example: fedora or sunglasses
+     * @param price price of product
+     * @param description describe the product
      * Constructor for objects of class Accessories
      */
     public Accessories(String type, int price, String description)
@@ -23,10 +35,16 @@ public class Accessories
         this.description = description;
     }
     
+    /**
+     * @return price of product
+     */
     public int returnPrice() {
         return price;
     }
     
+    /**
+     * prints basic info about products
+     */
     public void printDetails() {
         System.out.println("################");
         System.out.println("Type: " + type);
@@ -34,6 +52,9 @@ public class Accessories
         System.out.println("Description: " + description);
     }
     
+    /**
+     * @return type of product, example: fedora or sunglasses
+     */
     public String returnType() {
         return type;
     }

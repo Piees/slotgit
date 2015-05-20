@@ -13,7 +13,7 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Arrays;
 /**
- * Write a description of class Gui here.
+ * Graphical user interface for class User
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -23,7 +23,8 @@ public class Gui
     User usr = new User();
     private int addBalanceInputAmount;
     private String stringAmount;
-    final HashMap<Integer, ArrayList<Integer>> rewardAllocation = new HashMap<Integer, ArrayList<Integer>>(); //key is placement and value is rewards lines
+    final HashMap<Integer, ArrayList<Integer>> rewardAllocation = 
+        new HashMap<Integer, ArrayList<Integer>>(); 
     private int oldBalance;
     JLabel creditLabel;
     JLabel spin1Label;
@@ -42,6 +43,9 @@ public class Gui
     ImageIcon orangeWin = new ImageIcon("images/orangeWin.png");
     ImageIcon jokerWin = new ImageIcon("images/jokerWin.png");
     
+    /**
+     * constructor of Gui creats one swing window
+     */
     public Gui()
     {
         rewardAllocation.put(1, new ArrayList<Integer>(Arrays.asList(2, 4)));
@@ -66,7 +70,8 @@ public class Gui
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 1;
         gbc.gridy = 0;
-        spin1Label.setText("<html><body style='height:57px'>Welcome<body></html>");
+        spin1Label.setText("<html><body style='height:57px'>" +
+            "Welcome<body></html>");
         frame.getContentPane().add(spin1Label, gbc);
         
         /**
@@ -77,18 +82,20 @@ public class Gui
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 0;
-        spin2Label.setText("<html><body style='height:57px'>to<body></html>");
+        spin2Label.setText("<html><body style='height:57px'>" +
+            "to<body></html>");
         frame.getContentPane().add(spin2Label, gbc);
         
         /**
          * @JLabel
          * spin3Label
          */
-        spin3Label= new JLabel();
+        spin3Label = new JLabel();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 3;
         gbc.gridy = 0;
-        spin3Label.setText("<html><body style='height:57px'>Slots'O'Fun!<body></html>");
+        spin3Label.setText("<html><body style='height:57px'>" +
+            "Slots'O'Fun!<body></html>");
         frame.getContentPane().add(spin3Label, gbc);
         /**
          * @JLabel
@@ -98,7 +105,8 @@ public class Gui
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 1;
         gbc.gridy = 1;
-        spin4Label.setText("<html><body style='height:57px'>Welcome<body></html>");
+        spin4Label.setText("<html><body style='height:57px'>" +
+            "Welcome<body></html>");
         frame.getContentPane().add(spin4Label, gbc);
         
         /**
@@ -109,18 +117,20 @@ public class Gui
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 1;
-        spin5Label.setText("<html><body style='height:57px'>to<body></html>");
+        spin5Label.setText("<html><body style='height:57px'>" +
+            "to<body></html>");
         frame.getContentPane().add(spin5Label, gbc);
         
         /**
          * @JLabel
          * spin6Label
          */
-        spin6Label= new JLabel();
+        spin6Label = new JLabel();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 3;
         gbc.gridy = 1;
-        spin6Label.setText("<html><body style='height:57px'>Slots'O'Fun!<body></html>");
+        spin6Label.setText("<html><body style='height:57px'>" +
+            "Slots'O'Fun!<body></html>");
         frame.getContentPane().add(spin6Label, gbc);
         /**
          * @JLabel
@@ -130,7 +140,8 @@ public class Gui
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 1;
         gbc.gridy = 2;
-        spin7Label.setText("<html><body style='height:57px'>Welcome<body></html>");
+        spin7Label.setText("<html><body style='height:57px'>" +
+            "Welcome<body></html>");
         frame.getContentPane().add(spin7Label, gbc);
         
         /**
@@ -141,18 +152,20 @@ public class Gui
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 2;
         gbc.gridy = 2;
-        spin8Label.setText("<html><body style='height:57px'>to<body></html>");
+        spin8Label.setText("<html><body style='height:57px'>" +
+            "to<body></html>");
         frame.getContentPane().add(spin8Label, gbc);
         
         /**
          * @JLabel
          * spin9Label
          */
-        spin9Label= new JLabel();
+        spin9Label = new JLabel();
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 3;
         gbc.gridy = 2;
-        spin9Label.setText("<html><body style='height:57px'>Slots'O'Fun!<body></html>");
+        spin9Label.setText("<html><body style='height:57px'>" +
+            "Slots'O'Fun!<body></html>");
         frame.getContentPane().add(spin9Label, gbc);
         
         /**
@@ -186,12 +199,13 @@ public class Gui
         JButton addBalanceButton = new JButton(new AbstractAction() {
             public void actionPerformed(ActionEvent e)
             {
-                String stringAmount = addBalanceInput.getText();
+                /**String **/stringAmount = addBalanceInput.getText();
                 addBalanceInputAmount = Integer.valueOf(stringAmount);
                 usr.vallet.addBalance(addBalanceInputAmount);
                 creditLabel.setText("Credits: " + usr.vallet.returnBalance());
                 addBalanceInput.setText("");
-                JOptionPane.showMessageDialog(null, "Your current balance is: " + usr.vallet.returnBalance());
+                JOptionPane.showMessageDialog(null, "Your current balance is: "
+                    + usr.vallet.returnBalance());
             }
         });
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -206,23 +220,24 @@ public class Gui
          * @button
          * plays 1 line
          */
-        JButton pOneBut = new JButton(new AbstractAction(){
-        public void actionPerformed(ActionEvent e)
-        {
-            oldBalance = usr.vallet.returnBalance();
-            usr.play(1);
-            creditLabel.setText("Credits: " + usr.vallet.returnBalance());
-            spin1Label.setIcon(returnIcon(1, 1));
-            spin2Label.setIcon(returnIcon(2, 1));
-            spin3Label.setIcon(returnIcon(3, 1));
-            spin4Label.setIcon(returnIcon(4, 1));
-            spin5Label.setIcon(returnIcon(5, 1));
-            spin6Label.setIcon(returnIcon(6, 1));
-            spin7Label.setIcon(returnIcon(7, 1));
-            spin8Label.setIcon(returnIcon(8, 1));
-            spin9Label.setIcon(returnIcon(9, 1));
-            rewardPopup(1);
-        }});
+        JButton pOneBut = new JButton(new AbstractAction() {
+            public void actionPerformed(ActionEvent e)
+            {
+                oldBalance = usr.vallet.returnBalance();
+                usr.play(1);
+                creditLabel.setText("Credits: " + usr.vallet.returnBalance());
+                spin1Label.setIcon(returnIcon(1, 1));
+                spin2Label.setIcon(returnIcon(2, 1));
+                spin3Label.setIcon(returnIcon(3, 1));
+                spin4Label.setIcon(returnIcon(4, 1));
+                spin5Label.setIcon(returnIcon(5, 1));
+                spin6Label.setIcon(returnIcon(6, 1));
+                spin7Label.setIcon(returnIcon(7, 1));
+                spin8Label.setIcon(returnIcon(8, 1));
+                spin9Label.setIcon(returnIcon(9, 1));
+                rewardPopup(1);
+            }
+        });
         gbc.fill = GridBagConstraints.HORIZONTAL;
         gbc.gridx = 0;
         gbc.gridy = 4;
@@ -233,7 +248,7 @@ public class Gui
          * @button
          * play 2 lines
          */
-        JButton pTwoBut = new JButton(new AbstractAction(){
+        JButton pTwoBut = new JButton(new AbstractAction() {
             public void actionPerformed(ActionEvent e)
             {
                 oldBalance = usr.vallet.returnBalance();
@@ -261,22 +276,22 @@ public class Gui
          * @button
          * play 3 lines
          */
-        JButton pThreeBut = new JButton(new AbstractAction(){
+        JButton pThreeBut = new JButton(new AbstractAction() {
             public void actionPerformed(ActionEvent e)
             {
-            oldBalance = usr.vallet.returnBalance();
-            usr.play(3);
-            creditLabel.setText("Credits: " + usr.vallet.returnBalance());
-            spin1Label.setIcon(returnIcon(1, 3));
-            spin2Label.setIcon(returnIcon(2, 3));
-            spin3Label.setIcon(returnIcon(3, 3));
-            spin4Label.setIcon(returnIcon(4, 3));
-            spin5Label.setIcon(returnIcon(5, 3));
-            spin6Label.setIcon(returnIcon(6, 3));
-            spin7Label.setIcon(returnIcon(7, 3));
-            spin8Label.setIcon(returnIcon(8, 3));
-            spin9Label.setIcon(returnIcon(9, 3));
-            rewardPopup(3);
+                oldBalance = usr.vallet.returnBalance();
+                usr.play(3);
+                creditLabel.setText("Credits: " + usr.vallet.returnBalance());
+                spin1Label.setIcon(returnIcon(1, 3));
+                spin2Label.setIcon(returnIcon(2, 3));
+                spin3Label.setIcon(returnIcon(3, 3));
+                spin4Label.setIcon(returnIcon(4, 3));
+                spin5Label.setIcon(returnIcon(5, 3));
+                spin6Label.setIcon(returnIcon(6, 3));
+                spin7Label.setIcon(returnIcon(7, 3));
+                spin8Label.setIcon(returnIcon(8, 3));
+                spin9Label.setIcon(returnIcon(9, 3));
+                rewardPopup(3);
             }
         });
         gbc.fill = GridBagConstraints.HORIZONTAL;
@@ -289,7 +304,7 @@ public class Gui
          * @button
          * play 4 lines
          */
-        JButton pFourBut = new JButton(new AbstractAction(){
+        JButton pFourBut = new JButton(new AbstractAction() {
             public void actionPerformed(ActionEvent e)
             {
                 oldBalance = usr.vallet.returnBalance();
@@ -308,7 +323,7 @@ public class Gui
             }
         });
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        gbc.gridx =3;
+        gbc.gridx = 3;
         gbc.gridy = 4;
         pFourBut.setText("Play 4 lines");
         frame.getContentPane().add(pFourBut, gbc);
@@ -317,7 +332,7 @@ public class Gui
          * @button
          * play 5 lines
          */
-        JButton pFiveBut = new JButton(new AbstractAction(){
+        JButton pFiveBut = new JButton(new AbstractAction() {
             public void actionPerformed(ActionEvent e)
             {
                 oldBalance = usr.vallet.returnBalance();
@@ -375,28 +390,46 @@ public class Gui
         spin9Label.setText("");
     }
     
-    public ImageIcon returnWinIcon(int i){
-        if (usr.bandit.adm.getRewardInfo(i) == usr.bandit.adm.APPLEPRIZE) {
+    /**
+     * @return ImageIcon win icon
+     * @param i for line to check
+     */
+    public ImageIcon returnWinIcon(int i) {
+        if (usr.bandit.adm.getRewardInfo(i) == 
+            usr.bandit.adm.APPLEPRIZE) {
             clearLabelText();
             return appleWin;
-        } else if (usr.bandit.adm.getRewardInfo(i) == usr.bandit.adm.ORANGEPRIZE) {
+        } 
+        else if (usr.bandit.adm.getRewardInfo(i) == 
+            usr.bandit.adm.ORANGEPRIZE) {
             clearLabelText();
             return orangeWin;
-        } else if (usr.bandit.adm.getRewardInfo(i) == usr.bandit.adm.JOKERPRIZE) {
+        } 
+        else if (usr.bandit.adm.getRewardInfo(i) == 
+            usr.bandit.adm.JOKERPRIZE) {
             clearLabelText();
             return jokerWin;
         }
         return null;
     }
     
+    /**
+     * @return ImageIcon loss icon
+     * @param i for line to check
+     */
     public ImageIcon returnLossIcon(int i) {
-        if (usr.bandit.adm.getRewardInfo(i) == usr.bandit.adm.APPLEPRIZE) {
+        if (usr.bandit.adm.getRewardInfo(i) == 
+            usr.bandit.adm.APPLEPRIZE) {
             clearLabelText();
             return apple;
-        } else if (usr.bandit.adm.getRewardInfo(i) == usr.bandit.adm.ORANGEPRIZE) {
+        } 
+        else if (usr.bandit.adm.getRewardInfo(i) == 
+            usr.bandit.adm.ORANGEPRIZE) {
             clearLabelText();
             return orange;
-        } else if (usr.bandit.adm.getRewardInfo(i) == usr.bandit.adm.JOKERPRIZE) {
+        } 
+        else if (usr.bandit.adm.getRewardInfo(i) == 
+            usr.bandit.adm.JOKERPRIZE) {
             clearLabelText();
             return joker;
         }
@@ -404,22 +437,32 @@ public class Gui
     }
     
     /**
-     * returns icon for label i for amounts of lines played
+     * @return ImageIcon for label i for amounts of lines played
+     * @param i for line to check
+     * @param line for how many lines to check
      */
-    public ImageIcon returnIcon(int i, int line) { //i = 4, line = 1
-        for (int itr : rewardAllocation.get(i)) {//itr=1
-            if ((usr.bandit.rng.rewards.get(itr) !=0) && itr <= line) {
+    public ImageIcon returnIcon(int i, int line) {
+        for (int itr : rewardAllocation.get(i)) {
+            if ((usr.bandit.rng.rewards.get(itr) != 0) && itr <= line) {
                 return returnWinIcon(i);
             }
         }
         return returnLossIcon(i);
     }
     
+    /**
+     * @param i for game cost to pinpoint isufficient balances
+     * outputs a JOptionPane with error if there is insufficient balance
+     * outputs a JOptionPane with balance change if game was played
+     */
     public void rewardPopup(int i) {
         if (oldBalance <= (i - 1)) {
-            JOptionPane.showMessageDialog(null, "Insufficient balance, please add more");
-        } else {
-            JOptionPane.showMessageDialog(null, "Your balance changed by " + (usr.vallet.returnBalance() - oldBalance));
+            JOptionPane.showMessageDialog(null, 
+                "Insufficient balance, please add more");
+        } 
+        else {
+            JOptionPane.showMessageDialog(null, "Your balance changed by " 
+                + (usr.vallet.returnBalance() - oldBalance));
         }
     }
 }

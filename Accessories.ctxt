@@ -1,11 +1,14 @@
 #BlueJ class context
 comment0.params=type\ price\ description
 comment0.target=Accessories(java.lang.String,\ int,\ java.lang.String)
-comment0.text=\n\ Constructor\ for\ objects\ of\ class\ Accessories\n
+comment0.text=\n\ @param\ type\ of\ accessory,\ example\:\ fedora\ or\ sunglasses\n\ @param\ price\ price\ of\ product\n\ @param\ description\ describe\ the\ product\n\ Constructor\ for\ objects\ of\ class\ Accessories\n
 comment1.params=
 comment1.target=int\ returnPrice()
+comment1.text=\n\ @return\ price\ of\ product\n
 comment2.params=
 comment2.target=void\ printDetails()
+comment2.text=\n\ prints\ basic\ info\ about\ products\n
 comment3.params=
 comment3.target=java.lang.String\ returnType()
+comment3.text=\n\ @return\ type\ of\ product,\ example\:\ fedora\ or\ sunglasses\n
 numComments=4

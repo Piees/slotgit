@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Glasses here.
+ * subclass Glasses of Accessories
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -12,10 +12,12 @@ public class Glasses extends Accessories
 
     /**
      * Constructor for objects of class Glasses
+     * @param type of Glasses, example: sunglasses
+     * @param price of Glasses
+     * @param description of Glasses
      */
     public Glasses(String type, int price, String description)
     {
-        // initialise instance variables
         super(type, price, description);
     }
     
@@ -24,6 +26,9 @@ public class Glasses extends Accessories
         return type;
     }
     
+    /**
+     * prints glasses details
+     */
     public void printDetails() {
         super.printDetails();
     }

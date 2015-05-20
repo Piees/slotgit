@@ -1,6 +1,6 @@
 
 /**
- * Write a description of class Hat here.
+ * subclass Hat of Accessories
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -12,10 +12,12 @@ public class Hat extends Accessories
 
     /**
      * Constructor for objects of class Hat
+     * @param type of Hat, example: fedora
+     * @param price of Hat
+     * @param description of Hat
      */
     public Hat(String type, int price, String description)
     {
-        // initialise instance variables
         super(type, price, description);
         this.type = type;
     }
@@ -25,6 +27,9 @@ public class Hat extends Accessories
         return type;
     }
     
+    /**
+     * prints details of Hat
+     */
     public void printDetails() {
         super.printDetails();
     }

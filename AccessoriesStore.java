@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 /**
- * Write a description of class AccessoriesStore here.
+ * Stores 4 pre-made products and are imported to
+ * buy accessories and browsing inventory
  * 
  * @author (your name) 
  * @version (a version number or a date)
@@ -18,10 +19,14 @@ public class AccessoriesStore
     public AccessoriesStore()
     {
         // initialise instance variables
-        accs.add(new Hat("Fedora", 10, "A regular fedora"));
-        accs.add(new Hat("Cool Fedora", 10, "This is a cool fedora"));
-        accs.add(new Glasses("Sunglasses", 10, "Regular sunglasses for use outside"));
-        accs.add(new Glasses("Cool Sunglasses", 15, "These sunglasses are so cool you could wear them outside"));
+        accs.add(new Hat("Fedora", 10, 
+            "A regular fedora"));
+        accs.add(new Hat("Cool Fedora", 10, 
+            "This is a cool fedora"));
+        accs.add(new Glasses("Sunglasses", 10, 
+            "Regular sunglasses for use outside"));
+        accs.add(new Glasses("Cool Sunglasses", 15, 
+            "These sunglasses are so cool you could wear them outside"));
     }
     
     
@@ -34,6 +39,9 @@ public class AccessoriesStore
         accs.add(accy);
     }
     
+    /**
+     * @return hat Accessories
+     */
     public Accessories returnHat()
     {
         for (Accessories accessories : accs) {
@@ -44,6 +52,9 @@ public class AccessoriesStore
         return hat;
     }
     
+    /**
+     * @return glasses Accessories
+     */
     public Accessories returnGlasses()
     {
         for (Accessories accessories : accs) {
@@ -54,6 +65,9 @@ public class AccessoriesStore
         return glasses;
     }
     
+    /**
+     * prints all hats with details
+     */
     public void printHats()
     {
         for (Accessories accessories : accs) {
@@ -63,6 +77,9 @@ public class AccessoriesStore
         }
     }
     
+    /**
+     * prints all glasses with details
+     */
     public void printGlasses()
     {
         for (Accessories accessories : accs) {

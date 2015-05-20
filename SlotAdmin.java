@@ -1,26 +1,31 @@
 import java.util.*;
 /**
- * Write a description of class SlotAdmin here.
+ * reward and list manager
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Yngve Olsen Ranestad
+ * @version 20.05.15
  */
 public class SlotAdmin
 {
+    /**
+     * used to store value of each symbol after a spin
+     */
     public static int[] reward = new int[10];
+    /**
+     * stores base value of each symbol after spin
+     */
     public int[] spins = new int[10];
-    public static int rewardSize;
-    public static int i;
-    public static String returnedReward;
-    public static int[] rewardList = new int[9];
     static final int ORANGEPRIZE = 2;
     static final int APPLEPRIZE = 4;
     static final int JOKERPRIZE = 8;
+    /**
+     * use index values next to base value of spin to return string fo symbol
+     */
     public static final ArrayList<String> SYMBOLS = new ArrayList<String>();
-    //static final List<String> SYMBOLS = Arrays.asList("orange", "apple", "joker");
     //http://gabrito.com/post/instantiating-and-populating-a-list-or-collection
-    static List<String> theRewards = Arrays.asList("**********","Rewards:","Orange = " + ORANGEPRIZE,"Apple = " + APPLEPRIZE, "Joker = " + JOKERPRIZE, 
-                                                        "**********");
+    static List<String> theRewards = Arrays.asList("**********", "Rewards:", 
+        "Orange = " + ORANGEPRIZE, "Apple = " + APPLEPRIZE, "Joker = " 
+        + JOKERPRIZE, "**********");
    
     /**
      * Constructor for objects of class SlotAdmin
@@ -32,46 +37,20 @@ public class SlotAdmin
         SYMBOLS.add(new String("orange"));
         SYMBOLS.add(new String("apple"));
         SYMBOLS.add(new String("joker"));
-        rewardList[0] = 0;
-        /*SYMBOLS.set(1, new String("apple"));
-        SYMBOLS.set(2, new String("orange"));
-        SYMBOLS.set(3, new String("joker"));*/
     }
     
     /**
-     * clears out rewardList from 0 to 8
-     */
-    public static void clearRewardList()
-    {
-        for (int j = 0; j <= 8; j++) {
-            rewardList[j] = 0;
-        }
-    }
-    
-    /**
-     * @returns int from index of reward[]
+     * @param i to return specific reward
+     * @return i from index of reward[]
      */
     public int getRewardInfo(int i)
     {
         return reward[i];
     }
         
-    
     /**
-     * @returns true if rewardList is empty
-     * for use in bandit to check if you won anything
-     */
-    public static boolean rewardListEmpty(int payin)
-    {
-        for (int j = 0; j <= payin - 1; j++) {
-            if (rewardList[j] == 1) {
-                return false;
-            }
-        }
-            return true;
-    }
-        
-    /**
+     * @param rewardLine for line to be set
+     * @param newReward for value to be set
      * sets reward to rewardLine from newReward
      */
     public static void setReward(int rewardLine, String newReward)
