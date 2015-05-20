@@ -20,13 +20,13 @@ public class AccessoriesStore
     {
         // initialise instance variables
         accs.add(new Hat("Fedora", 10, 
-            "A regular fedora"));
+            "A regular fedora", 1));
         accs.add(new Hat("Cool Fedora", 10, 
-            "This is a cool fedora"));
+            "This is a cool fedora", 2));
         accs.add(new Glasses("Sunglasses", 10, 
-            "Regular sunglasses for use outside"));
+            "Regular sunglasses for use outside", 1));
         accs.add(new Glasses("Cool Sunglasses", 15, 
-            "These sunglasses are so cool you could wear them outside"));
+            "These sunglasses are so cool you could wear them outside", 2));
     }
     
     
